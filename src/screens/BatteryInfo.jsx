@@ -17,13 +17,13 @@ export default function BatteryInfo() {
 
   function verificaCor(){
     if( nivelBateria > 80 ){
-      setColor('yellow');
+      setColor('green');
     } else if( nivelBateria > 50 ){
       setColor('orange');
-    } else if( nivelBateria > 20 ){
-      setColor('red');
+    } else if( nivelBateria > 30 ){
+      setColor('yellow');
     } else {
-      setColor('green');
+      setColor('red');
     };
   };
 
