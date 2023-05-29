@@ -10,16 +10,16 @@ export default function Header({ title }) {
 
 const styles = StyleSheet.create({
   header: {
-      paddingTop: 30,
-      backgroundColor: "#606",
-      paddingBottom: 5,
-      paddingHorizontal: 5,
+    paddingTop: 30,
+    backgroundColor: "#606",
+    paddingBottom: 5,
+    paddingHorizontal: 5,
   },
   headerTextStyle: {
-      marginTop: 10,
-      color: 'white',
-      fontWeight: 'bold',
-      fontSize: 35,
-      textAlign: 'center'
+    marginTop: 10,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 35,
+    textAlign: 'center'
   },
 });

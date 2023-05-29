@@ -1,9 +1,6 @@
 import { View, Text, Button } from 'react-native';
 import * as Battery from 'expo-battery';
-
 import Header from '../components/Header'
-import Footer from '../components/Footer'
-
 import { useEffect, useState } from 'react';
 
 export default function BatteryInfo() {
@@ -15,12 +12,12 @@ export default function BatteryInfo() {
     bateria();
   }
 
-  function verificaCor(){
-    if( nivelBateria > 80 ){
+  function verificaCor() {
+    if (nivelBateria > 80) {
       setColor('green');
-    } else if( nivelBateria > 50 ){
+    } else if (nivelBateria > 50) {
       setColor('orange');
-    } else if( nivelBateria > 30 ){
+    } else if (nivelBateria > 30) {
       setColor('yellow');
     } else {
       setColor('red');
@@ -43,7 +40,7 @@ export default function BatteryInfo() {
         title="Nível Bateria:"
       />
       <Text style={{
-        color: color,             
+        color: color,
         fontSize: 40,
         alignSelf: 'center',
         marginTop: 5,
@@ -62,8 +59,6 @@ export default function BatteryInfo() {
           onPress={atualizarTudo}>
         </Button>
       </View>
-      <Footer />
-
     </View>
   )
 };
