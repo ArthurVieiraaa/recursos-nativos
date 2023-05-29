@@ -38,6 +38,29 @@ export default function MyScreenOrientations( ) {
     
   }
 
+  async function right() {
+    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_RIGHT)
+  }
+
+  async function left() {
+    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT)
+  }
+
+  async function Baixo() {
+    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_DOWN)
+  }
+
+  async function Baixo() {
+    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_DOWN)
+  }
+
+  async function Baixo() {
+    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_DOWN)
+  }
+
+    async function Baixo() {
+    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_DOWN)
+  }
 
 
   return (
@@ -49,8 +72,8 @@ export default function MyScreenOrientations( ) {
       style={styles.content} 
       >
          <Button title="Default" onPress={padrao} />  
-         <Button title="Deitar Direita" onPress={Baixo} />  
-         <Button title="Deitar Esquerda" onPress={padrao} />  
+         <Button title="Deitar Direita" onPress={right} />  
+         <Button title="Deitar Esquerda" onPress={left} />  
          <Button title="Forçar Normal" onPress={padrao} />  
          <Button title="Forçar Inverter" onPress={padrao} />  
          <Button title="Forçar Normal2" onPress={padrao} />
