@@ -1,12 +1,22 @@
-import * as React from 'react';
-import { Button, View } from 'react-native';
+// import { NavigationContainer } from "@react-navigation/native";
+import { View } from "react-native";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import BatteryInfo from "./BatteryInfo";
+import DeviceInfo from "./DeviceInfo";
+import MyScreenOrientation from "./MyScreenOrientation";
+import Notify from "./Notify";
+import ContactInfo from "./ContactsInfo";
 
-export default function Home({ navigation }) {
-    return (
-        <View>
-            <Button title='Informações da Bateria' onPress={() => navigation.navigate('BatteryInfo')} />
-            <Button title='Informações do Dispositivo' onPress={() => navigation.navigate('DeviceInfo')} />
-            <Button title='Informações da Orientação' onPress={() => navigation.navigate('MyScreenOrientation')} />
-        </View>
-    )
+const Stack = createMaterialBottomTabNavigator();
+
+export default function RootNavigation() {
+  return (
+      <Stack.Navigator>
+        <Stack.Screen name="Contact" component={ContactInfo} />
+        <Stack.Screen name="Notificação" component={Notify} />
+        <Stack.Screen name="BatteryInfo" component={BatteryInfo} />
+        <Stack.Screen name="DeviceInfo" component={DeviceInfo} />
+        <Stack.Screen name="Orientação" component={MyScreenOrientation} />
+      </Stack.Navigator>
+  );
 }
